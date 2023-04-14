@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" th:href="@{/css/estilos.css}">
+    <link rel="stylesheet" th:href="@{/css/estilosrepor.css}">
+    <link rel="stylesheet" th:href="@{/css/estilosslide.css}">
+  
+    <link rel="stylesheet" th:href="@{/css/estilosinterusuario.css}">
+    <link rel="shortcut icon" th:href="@{/images/ZNlogoMusicTransparentLittle.png}" type="image/x-icon">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rambla&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rum+Raisin&display=swap" rel="stylesheet">
+
+    <meta name="theme-color" content="#202020">
+
+    <script src="https://kit.fontawesome.com/a01a75bbd0.js" crossorigin="anonymous"></script>
+
+    <title>Perfil</title>
+</head>
+
+<body>
+
+    <!--Seccion Menu-->
+
+    <header>
+        <nav class="contenedormenu">
+            <div class="logo" onclick="location.href='/usuario';">
+                <img th:src="@{/images/LogoZanjarLetrasTransparente.png}">
+            </div>
+            <div class="enlaces">
+              	<a th:href="@{/sonidos}"><i class="fa-solid fa-music"></i>Agregar</a>
+                <a href="#son"><i class="fa-solid fa-music"></i>Albumnes</a>
+                <a th:href="@{/logout}"><i class="fa-solid fa-right-from-bracket"></i>Salir</a>
+            </div>
+            
+
+            <div class="hamburguesa">
+                <i class="fa-solid fa-bars" id="hamburguesa"></i>
+            </div>
+
+        </nav>
+    </header>
+
+    <!--Imagen Portada-->
+
+    <div class="portada" id="inicioo">
+        <img th:src="@{/images/studio22.jpg}" alt="">
+    </div>
+
+    <!--Seccion Redes Sociales
+
+    <div class="socialbar">
+        <a href="https://www.facebook.com/profile.php?id=100013355534856" class="iconface" target="_blank"><img src="images/iconf.png" class="icosociales"></a>
+        <a href="https://www.instagram.com/l_neri_l/" class="iconinsta" target="_blank"><img src="images/iconi.png" class="icosociales"></a>
+        <a href="https://twitter.com/LNERI8?s=07" class="icontwi" target="_blank"><img src="images/icont.png" class="icosociales"></a>
+        
+    </div>-->
+
+    <main>
+
+        <script type="text/javascript" th:src="@{/assets/jquery/jquery.min.js}"></script>
+        <script type="text/javascript" th:src="@{/scriptrepro.js}"></script>
+       
+    
+
+        <div class="wrap">
+            <h2 class="titulos" id="son">Canciones Artistas</h2>
+            <div class="store-wrapper">
+                <div class="category_list">
+                    <p href="#" class="category_item" category="all">Todo</p>
+                
+                    <br>
+                    <p href="#" class="category_item" category="badbunny">Bab Bunny</p>
+                    <p href="#" class="category_item" category="paulo">Paulo Londra</p>
+                    <p href="#" class="category_item" category="junior">Junior H</p>
+                    <p href="#" class="category_item" category="kygo">Kygo</p>
+                    <p href="#" class="category_item" category="duki">Duki</p>
+                    <p href="#" class="category_item" category="lit">Lit Killah</p>
+                    <p href="#" class="category_item" category="travis">Travis Scott</p>
+                    <p href="#" class="category_item" category="mello">Marshmello</p>
+                    <p href="#" class="category_item" category="martin">Martin Garrix</p>
+                    <p href="#" class="category_item" category="weeknd">The Weeknd</p>
+                    <p href="#" class="category_item" category="sheeran">Ed Sheeran</p>
+                    
+
+                </div>
+                <section class="products-list">
+                 
+                    <div class="product-item" category="badbunny">
+                        <img th:src="@{/assets/CatalogoSonidos/ArtistasMe/BadBunny/BadBunnyCalladita.jpg}" alt="" >
+                        <div class="botonesselect">
+                            <audio id="audio80">
+                                <source th:src="@{/assets/CatalogoSonidos/ArtistasMe/BadBunny/BadBunnyCalladitaMelodiaEqualizada.mp3}" type="audio/mpeg">
+                            </audio>
+                            <p class="p1" id="playPauseP80" onclick="playPause80()">Play</p>  
+                          
+                            <a class="a1" download="BadBunnyCalladitaMelodia" th:href="@{/assets/CatalogoSonidos/ArtistasMe/BadBunny/BadBunnyCalladitaMelodiaEqualizada.mp3}">Descargar</a>
+                        </div>
+                    </div>
+                    <div class="product-item" category="badbunny">
+                        <img th:src="@{/assets/CatalogoSonidos/ArtistasMe/BadBunny/BadBunnyOjitosLindos.jpg}" alt="" >
+                        <div class="botonesselect">
+                            <audio id="audio81">
+                                <source th:src="@{/assets/CatalogoSonidos/ArtistasMe/BadBunny/BadBunnyTrompetasOjitosLindos.mp3}" type="audio/mpeg">
+                            </audio>
+                            <p class="p1" id="playPauseP81" onclick="playPause81()">Play</p>  
+                          
+                            <a class="a1" download="BadBunnyOjitosLindosMelodia" th:href="@{/assets/CatalogoSonidos/ArtistasMe/BadBunny/BadBunnyTrompetasOjitosLindos.mp3}">Descargar</a>
+                        </div>
+                    </div>
+
+                    <div class="product-item" category="paulo">
+                        <img th:src="@{/assets/CatalogoSonidos/ArtistasMe/PauloLondra/PauloLondraBZRPsession.jpg}" alt="" >
+                        <div class="botonesselect">
+                            <audio id="audio82">
+                                <source th:src="@{/assets/CatalogoSonidos/ArtistasMe/PauloLondra/BZRPpauloLondraMelodia.mp3}" type="audio/mpeg">
+                            </audio>
+                            <p class="p1" id="playPauseP82" onclick="playPause82()">Play</p>  
+                          
+                            <a class="a1" download="PauloLondraBZRPsessionMelodia" th:href="@{/assets/CatalogoSonidos/ArtistasMe/PauloLondra/BZRPpauloLondraMelodia.mp3}">Descargar</a>
+                        </div>
+                    </div>
+                    <div class="product-item" category="paulo">
+                        <img th:src="@{/assets/CatalogoSonidos/ArtistasMe/PauloLondra/PauloLondraAdanYEvaa.jpg}" alt="" >
+                        <div class="botonesselect">
+                            <audio id="audio83">
+                                <source th:src="@{/assets/CatalogoSonidos/ArtistasMe/PauloLondra/PauloLondraAdanYEvaMelodiaEqualizada.mp3}" type="audio/mpeg">
+                            </audio>
+                            <p class="p1" id="playPauseP83" onclick="playPause83()">Play</p>  
+                          
+                            <a class="a1" download="PauloLondraAdanYEvaMelodia" th:href="@{/assets/CatalogoSonidos/ArtistasMe/PauloLondra/PauloLondraAdanYEvaMelodiaEqualizada.mp3}">Descargar</a>
+                        </div>
+                    </div>
+                    <div class="product-item" category="paulo">
+                        <img th:src="@{/assets/CatalogoSonidos/ArtistasMe/PauloLondra/PauloLondraPorEsoVinee.jpg}" alt="" >
+                        <div class="botonesselect">
+                            <audio id="audio84">
+                                <source th:src="@{/assets/CatalogoSonidos/ArtistasMe/PauloLondra/PauloLondraPorEsoVineMelodiaEqualizada.mp3}" type="audio/mpeg">
+                            </audio>
+                            <p class="p1" id="playPauseP84" onclick="playPause84()">Play</p>  
+                          
+                            <a class="a1" download="PauloLondraPorEsoVineMelodia" th:href="@{/assets/CatalogoSonidos/ArtistasMe/PauloLondra/PauloLondraPorEsoVineMelodiaEqualizada.mp3}">Descargar</a>
+                        </div>
+                    </div>
+                    <div class="product-item" category="paulo">
+                        <img th:src="@{/assets/CatalogoSonidos/ArtistasMe/PauloLondra/PauloLondraDukiPartyEnElBarrio.jpg}" alt="" >
+                        <div class="botonesselect">
+                            <audio id="audio85">
+                                <source th:src="@{/assets/CatalogoSonidos/ArtistasMe/PauloLondra/PauloLondraDukiPartyEnElBarriloMelodia.mp3}" type="audio/mpeg">
+                            </audio>
+                            <p class="p1" id="playPauseP85" onclick="playPause85()">Play</p>  
+                          
+                            <a class="a1" download="PauloLondraPartyEnElBarrioMelodia" th:href="@{/assets/CatalogoSonidos/ArtistasMe/PauloLondra/PauloLondraDukiPartyEnElBarriloMelodia.mp3}">Descargar</a>
+                        </div>
+                    </div>
+                    <div class="product-item" category="paulo">
+                        <img th:src="@{/assets/CatalogoSonidos/ArtistasMe/PauloLondra/PauloLondraSoloPiensoEnTii.jpg}" alt="" >
+                        <div class="botonesselect">
+                            <audio id="audio86">
+                                <source th:src="@{/assets/CatalogoSonidos/ArtistasMe/PauloLondra/PauloLondraSoloPiensoEnTiMelodia.mp3}" type="audio/mpeg">
+                            </audio>
+                            <p class="p1" id="playPauseP86" onclick="playPause86()">Play</p>  
+                          
+                            <a class="a1" download="PauloLondraSoloPiensoEnTiMelodia" th:href="@{/assets/CatalogoSonidos/ArtistasMe/PauloLondra/PauloLondraSoloPiensoEnTiMelodia.mp3}">Descargar</a>
+                        </div>
+                    </div>
+                    <div class="product-item" category="paulo">
+                        <img th:src="@{/assets/CatalogoSonidos/ArtistasMe/PauloLondra/PauloLondraChanceMeloida.jpg}" alt="" >
+                        <div class="botonesselect">
+                            <audio id="audio111">
+                                <source th:src="@{/assets/CatalogoSonidos/ArtistasMe/PauloLondra/PauloLondraChanceMeloida.mp3}" type="audio/mpeg">
+                            </audio>
+                            <p class="p1" id="playPauseP111" onclick="playPause111()">Play</p>  
+                          
+                            <a class="a1" download="PauloLondraChanceMelodia" th:href="@{/assets/CatalogoSonidos/ArtistasMe/PauloLondra/PauloLondraChanceMeloida.mp3}">Descargar</a>
+                        </div>
+                    </div>
+                    <div class="product-item" category="paulo">
+                        <img th:src="@{/assets/CatalogoSonidos/ArtistasMe/PauloLondra/PauloLondraChicaParanormal.jpg}" alt="" >
+                        <div class="botonesselect">
+                            <audio id="audio112">
+                                <source th:src="@{/assets/CatalogoSonidos/ArtistasMe/PauloLondra/PauloLondraChicaParanormalMelodia.mp3}" type="audio/mpeg">
+                            </audio>
+                            <p class="p1" id="playPauseP112" onclick="playPause112()">Play</p>  
+                          
+                            <a class="a1" download="PauloLondraChicaParanormalMelodia" th:href="@{/assets/CatalogoSonidos/ArtistasMe/PauloLondra/PauloLondraChicaParanormalMelodia.mp3}">Descargar</a>
+                        </div>
+                    </div>
+                    <div class="product-item" category="paulo">
+                        <img th:src="@{/assets/CatalogoSonidos/ArtistasMe/PauloLondra/PauloLondraPlanA.jpg}" alt="" >
+                        <div class="botonesselect">
+                            <audio id="audio113">
+                                <source th:src="@{/assets/CatalogoSonidos/ArtistasMe/PauloLondra/PauloLondraPlanAMelodia.mp3}" type="audio/mpeg">
+                            </audio>
+                            <p class="p1" id="playPauseP113" onclick="playPause113()">Play</p>  
+                          
+                            <a class="a1" download="PauloLondraPlanAMelodia" th:href="@{/assets/CatalogoSonidos/ArtistasMe/PauloLondra/PauloLondraPlanAMelodia.mp3}">Descargar</a>
+                        </div>
+                    </div>
+                    <div class="product-item" category="paulo">
+                        <img th:src="@{/assets/CatalogoSonidos/ArtistasMe/PauloLondra/PauloLondraAveces.jpg}" alt="" >
+                        <div class="botonesselect">
+                            <audio id="audio114">
+                                <source th:src="@{/assets/CatalogoSonidos/ArtistasMe/PauloLondra/PauloLondraAvecesMelodia.mp3}" type="audio/mpeg">
+                            </audio>
+                            <p class="p1" id="playPauseP114" onclick="playPause114()">Play</p>  
+                          
+                            <a class="a1" download="PauloLondraAvecesMelodia" th:href="@{/assets/CatalogoSonidos/ArtistasMe/PauloLondra/PauloLondraAvecesMelodia.mp3}">Descargar</a>
+                        </div>
+                    </div>
+
+        
+                    <div class="product-item" category="junior">
+                        <img th:src="@{/assets/CatalogoSonidos/ArtistasMe/JuniorH/JuniorH1.jpg}" alt="" >
+                        <div class="botonesselect">
+                            <audio id="audio87">
+                                <source th:src="@{/assets/CatalogoSonidos/ArtistasMe/JuniorH/JuniorhAcusticaMelodia.mp3}" type="audio/mpeg">
+                            </audio>
+                            <p class="p1" id="playPauseP87" onclick="playPause87()">Play</p>  
+                          
+                            <a class="a1" download="JuniorHAcusticaMelodia1" th:href="@{/assets/CatalogoSonidos/ArtistasMe/JuniorH/JuniorhAcusticaMelodia.mp3}">Descargar</a>
+                        </div>
+                    </div>
+                    <div class="product-item" category="junior">
+                        <img th:src="@{/assets/CatalogoSonidos/ArtistasMe/JuniorH/JuniorH2.jpg}" alt="" >
+                        <div class="botonesselect">
+                            <audio id="audio88">
+                                <source th:src="@{/assets/CatalogoSonidos/ArtistasMe/JuniorH/JuniorhAcusticaMelodia2.mp3}" type="audio/mpeg">
+                            </audio>
+                            <p class="p1" id="playPauseP88" onclick="playPause88()">Play</p>  
+                          
+                            <a class="a1" download="JuniorHAcustiaMelodia2" th:href="@{/assets/CatalogoSonidos/ArtistasMe/JuniorH/JuniorhAcusticaMelodia2.mp3}">Descargar</a>
+                        </div>
+                    </div>
+
+                    <div class="product-item" category="kygo">
+                        <img th:src="@{/assets/CatalogoSonidos/ArtistasMe/Kygo/KygoStargazing1.jpg}" alt="" >
+                        <div class="botonesselect">
+                            <audio id="audio89">
+                                <source th:src="@{/assets/CatalogoSonidos/ArtistasMe/Kygo/KygoStargazinMelodia1.mp3}" type="audio/mpeg">
+                            </audio>
+                            <p class="p1" id="playPauseP89" onclick="playPause89()">Play</p>  
+                          
+                            <a class="a1" download="KygoStargazingMelodia1" th:href="@{/assets/CatalogoSonidos/ArtistasMe/Kygo/KygoStargazinMelodia1.mp3}">Descargar</a>
+                        </div>
+                    </div>
+                    <div class="product-item" category="kygo">
+                        <img th:src="@{/assets/CatalogoSonidos/ArtistasMe/Kygo/KygoStargazing2.jpg}" alt="" >
+                        <div class="botonesselect">
+                            <audio id="audio90">
+                                <source th:src="@{/assets/CatalogoSonidos/ArtistasMe/Kygo/KygoStargazinMelodia2.mp3}" type="audio/mpeg">
+                            </audio>
+                            <p class="p1" id="playPauseP90" onclick="playPause90()">Play</p>  
+                          
+                            <a class="a1" download="KygoStargazingMelodia2" th:href="@{/assets/CatalogoSonidos/ArtistasMe/Kygo/KygoStargazinMelodia2.mp3}">Descargar</a>
+                        </div>
+                    </div>
+                    <div class="product-item" category="kygo">
+                        <img th:src="@{/assets/CatalogoSonidos/ArtistasMe/Kygo/KygoStolenShow1.jpg}" alt="" >
+                        <div class="botonesselect">
+                            <audio id="audio91">
+                                <source th:src="@{/assets/CatalogoSonidos/ArtistasMe/Kygo/KygoStolenShowMelodiaEqualizada.mp3}" type="audio/mpeg">
+                            </audio>
+                            <p class="p1" id="playPauseP91" onclick="playPause91()">Play</p>  
+                          
+                            <a class="a1" download="KygoStolenShowMelodia" th:href="@{/assets/CatalogoSonidos/ArtistasMe/Kygo/KygoStolenShowMelodiaEqualizada.mp3}">Descargar</a>
+                        </div>
+                    </div>
+
+                    
+                    <div class="product-item" category="duki">
+                        <img th:src="@{/assets/CatalogoSonidos/ArtistasMe/Duki/DukiGivenchi1.jpg}" alt="" >
+                        <div class="botonesselect">
+                            <audio id="audio92">
+                                <source th:src="@{/assets/CatalogoSonidos/ArtistasMe/Duki/DukiGivenchyMelodiaInicioEqualizada.mp3}" type="audio/mpeg">
+                            </audio>
+                            <p class="p1" id="playPauseP92" onclick="playPause92()">Play</p>  
+                          
+                            <a class="a1" download="DukiGivenchyMelodiaInicio" th:href="@{/assets/CatalogoSonidos/ArtistasMe/Duki/DukiGivenchyMelodiaInicioEqualizada.mp3}">Descargar</a>
+                        </div>
+                    </div>
+                    <div class="product-item" category="duki">
+                        <img th:src="@{/assets/CatalogoSonidos/ArtistasMe/Duki/DukiGivenchi2.jpg}" alt="" >
+                        <div class="botonesselect">
+                            <audio id="audio93">
+                                <source th:src="@{/assets/CatalogoSonidos/ArtistasMe/Duki/DukiGivenchyMelodiaEpicaEqualizada.mp3}" type="audio/mpeg">
+                            </audio>
+                            <p class="p1" id="playPauseP93" onclick="playPause93()">Play</p>  
+                          
+                            <a class="a1" download="DukiGivenchyMelodiaEpica" th:href="@{/assets/CatalogoSonidos/ArtistasMe/Duki/DukiGivenchyMelodiaEpicaEqualizada.mp3}">Descargar</a>
+                        </div>
+                    </div>
+                    <div class="product-item" category="duki">
+                        <img th:src="@{/assets/CatalogoSonidos/ArtistasMe/Duki/DukiMalbec.jpg}" alt="" >
+                        <div class="botonesselect">
+                            <audio id="audio94">
+                                <source th:src="@{/assets/CatalogoSonidos/ArtistasMe/Duki/MalbecFlautaReverb.mp3}" type="audio/mpeg">
+                            </audio>
+                            <p class="p1" id="playPauseP94" onclick="playPause94()">Play</p>  
+                          
+                            <a class="a1" download="DukiMalbecMelodia" th:href="@{/assets/CatalogoSonidos/ArtistasMe/Duki/MalbecFlautaReverb.mp3}">Descargar</a>
+                        </div>
+                    </div>
+
+
+                    <div class="product-item" category="lit">
+                        <img th:src="@{/assets/CatalogoSonidos/ArtistasMe/LitKillah/LitBombon.jpg}" alt="" >
+                        <div class="botonesselect">
+                            <audio id="audio95">
+                                <source th:src="@{/assets/CatalogoSonidos/ArtistasMe/LitKillah/LitKillahKillerBomBomMelodiaEqualizada.mp3}" type="audio/mpeg">
+                            </audio>
+                            <p class="p1" id="playPauseP95" onclick="playPause95()">Play</p>  
+                          
+                            <a class="a1" download="LitKillahBomBonMelodia" th:href="@{/assets/CatalogoSonidos/ArtistasMe/LitKillah/LitKillahKillerBomBomMelodiaEqualizada.mp3}">Descargar</a>
+                        </div>
+                    </div>
+                    <div class="product-item" category="lit">
+                        <img th:src="@{/assets/CatalogoSonidos/ArtistasMe/LitKillah/LitMalaMia.jpg}" alt="" >
+                        <div class="botonesselect">
+                            <audio id="audio96">
+                                <source th:src="@{/assets/CatalogoSonidos/ArtistasMe/LitKillah/LitKillahDukiMalaMiaMelodiaEqualizada.mp3}" type="audio/mpeg">
+                            </audio>
+                            <p class="p1" id="playPauseP96" onclick="playPause96()">Play</p>  
+                          
+                            <a class="a1" download="LitKillahMalaMiaMelodia" th:href="@{/assets/CatalogoSonidos/ArtistasMe/LitKillah/LitKillahDukiMalaMiaMelodiaEqualizada.mp3}">Descargar</a>
+                        </div>
+                    </div>
+
+
+                    <div class="product-item" category="travis">
+                        <img th:src="@{/assets/CatalogoSonidos/ArtistasMe/TravisScott/TravisScottHighest1.jpg}" alt="" >
+                        <div class="botonesselect">
+                            <audio id="audio97">
+                                <source th:src="@{/assets/CatalogoSonidos/ArtistasMe/TravisScott/TravisScottHighestInTheRoomMelodia1Equializada.mp3}" type="audio/mpeg">
+                            </audio>
+                            <p class="p1" id="playPauseP97" onclick="playPause97()">Play</p>  
+                          
+                            <a class="a1" download="TravisScottHighestInTheRoomMelodia1" th:href="@{/assets/CatalogoSonidos/ArtistasMe/TravisScott/TravisScottHighestInTheRoomMelodia1Equializada.mp3}">Descargar</a>
+                        </div>
+                    </div>
+                    <div class="product-item" category="travis">
+                        <img th:src="@{/assets/CatalogoSonidos/ArtistasMe/TravisScott/TravisScottHighest2.jpg}" alt="" >
+                        <div class="botonesselect">
+                            <audio id="audio98">
+                                <source th:src="@{/assets/CatalogoSonidos/ArtistasMe/TravisScott/TravisScottHighestInTheRoomMelodiaArmonicaEqualizada.mp3}" type="audio/mpeg">
+                            </audio>
+                            <p class="p1" id="playPauseP98" onclick="playPause98()">Play</p>  
+                          
+                            <a class="a1" download="TravisScottHighestInTheRoomMelodiaArmonica" th:href="@{/assets/CatalogoSonidos/ArtistasMe/TravisScott/TravisScottHighestInTheRoomMelodiaArmonicaEqualizada.mp3}">Descargar</a>
+                        </div>
+                    </div>
+                    <div class="product-item" category="travis">
+                        <img th:src="@{/assets/CatalogoSonidos/ArtistasMe/TravisScott/TravisScottSickoModee.jpg}" alt="" >
+                        <div class="botonesselect">
+                            <audio id="audio99">
+                                <source th:src="@{/assets/CatalogoSonidos/ArtistasMe/TravisScott/TravisScottSickoModeMelodiaEqualizada.mp3}" type="audio/mpeg">
+                            </audio>
+                            <p class="p1" id="playPauseP99" onclick="playPause99()">Play</p>  
+                          
+                            <a class="a1" download="TravisScottSickoModeMelodia" th:href="@{/assets/CatalogoSonidos/ArtistasMe/TravisScott/TravisScottSickoModeMelodiaEqualizada.mp3}">Descargar</a>
+                        </div>
+                    </div>
+                    <div class="product-item" category="travis">
+                        <img th:src="@{/assets/CatalogoSonidos/ArtistasMe/TravisScott/TravisScottOutWest.jpg}" alt="" >
+                        <div class="botonesselect">
+                            <audio id="audio100">
+                                <source th:src="@{/assets/CatalogoSonidos/ArtistasMe/TravisScott/TravisScottOutWestMelodiaEqualizada.mp3}" type="audio/mpeg">
+                            </audio>
+                            <p class="p1" id="playPauseP100" onclick="playPause100()">Play</p>  
+                          
+                            <a class="a1" download="TravisScottOutWestMelodia" th:href="@{/assets/CatalogoSonidos/ArtistasMe/TravisScott/TravisScottOutWestMelodiaEqualizada.mp3}">Descargar</a>
+                        </div>
+                    </div>
+
+                    <div class="product-item" category="mello">
+                        <img th:src="@{/assets/CatalogoSonidos/ArtistasMe/Marshmello/MarshmelloHappier1.jpg}" alt="" >
+                        <div class="botonesselect">
+                            <audio id="audio101">
+                                <source th:src="@{/assets/CatalogoSonidos/ArtistasMe/Marshmello/MarshmelloHappierMelodia1.mp3}" type="audio/mpeg">
+                            </audio>
+                            <p class="p1" id="playPauseP101" onclick="playPause101()">Play</p>  
+                          
+                            <a class="a1" download="MarshmelloHappierMelodia1" th:href="@{/assets/CatalogoSonidos/ArtistasMe/Marshmello/MarshmelloHappierMelodia1.mp3}">Descargar</a>
+                        </div>
+                    </div>
+                    <div class="product-item" category="mello">
+                        <img th:src="@{/assets/CatalogoSonidos/ArtistasMe/Marshmello/MarshmelloHappier2.jpg}" alt="" >
+                        <div class="botonesselect">
+                            <audio id="audio102">
+                                <source th:src="@{/assets/CatalogoSonidos/ArtistasMe/Marshmello/MarshmelloHappierMelodia1synth.mp3}" type="audio/mpeg">
+                            </audio>
+                            <p class="p1" id="playPauseP102" onclick="playPause102()">Play</p>  
+                          
+                            <a class="a1" download="MarshmelloHappierMelodia2" th:href="@{/assets/CatalogoSonidos/ArtistasMe/Marshmello/MarshmelloHappierMelodia1synth.mp3}">Descargar</a>
+                        </div>
+                    </div>
+                    <div class="product-item" category="mello">
+                        <img th:src="@{/assets/CatalogoSonidos/ArtistasMe/Marshmello/MarshmelloHappier3.jpg}" alt="" >
+                        <div class="botonesselect">
+                            <audio id="audio103">
+                                <source th:src="@{/assets/CatalogoSonidos/ArtistasMe/Marshmello/MarshmelloHappierMelodia2.mp3}" type="audio/mpeg">
+                            </audio>
+                            <p class="p1" id="playPauseP103" onclick="playPause103()">Play</p>  
+                          
+                            <a class="a1" download="MarshmelloHappierMelodia3" th:href="@{/assets/CatalogoSonidos/ArtistasMe/Marshmello/MarshmelloHappierMelodia2.mp3}">Descargar</a>
+                        </div>
+                    </div>
+                    <div class="product-item" category="mello">
+                        <img th:src="@{/assets/CatalogoSonidos/ArtistasMe/Marshmello/MarshmelloRitual.jpg}" alt="" >
+                        <div class="botonesselect">
+                            <audio id="audio104">
+                                <source th:src="@{/assets/CatalogoSonidos/ArtistasMe/Marshmello/MarshmelloRItualIntro.mp3}" type="audio/mpeg">
+                            </audio>
+                            <p class="p1" id="playPauseP104" onclick="playPause104()">Play</p>  
+                          
+                            <a class="a1" download="MarshmelloHappierMelodia1" th:href="@{/assets/CatalogoSonidos/ArtistasMe/Marshmello/MarshmelloRItualIntro.mp3}">Descargar</a>
+                        </div>
+                    </div>
+                    
+
+                    <div class="product-item" category="martin">
+                        <img th:src="@{/assets/CatalogoSonidos/ArtistasMe/MartinGarrix/MartinGarrixAnimalss.jpg}" alt="" >
+                        <div class="botonesselect">
+                            <audio id="audio105">
+                                <source th:src="@{/assets/CatalogoSonidos/ArtistasMe/MartinGarrix/MartinGarrixAnimalsMelodia.mp3}" type="audio/mpeg">
+                            </audio>
+                            <p class="p1" id="playPauseP105" onclick="playPause105()">Play</p>  
+                          
+                            <a class="a1" download="MartinGarrixAnimalsMelodia" th:href="assets/CatalogoSonidos/ArtistasMe/MartinGarrix/MartinGarrixAnimalsMelodia.mp3}">Descargar</a>
+                        </div>
+                    </div>
+                    <div class="product-item" category="martin">
+                        <img th:src="@{/assets/CatalogoSonidos/ArtistasMe/MartinGarrix/MartinGarrixTheseAreTheTimes.jpg}" alt="" >
+                        <div class="botonesselect">
+                            <audio id="audio106">
+                                <source th:src="@{/assets/CatalogoSonidos/ArtistasMe/MartinGarrix/MartinGarrixTheseAreTimesMelodia.mp3}" type="audio/mpeg">
+                            </audio>
+                            <p class="p1" id="playPauseP106" onclick="playPause106()">Play</p>  
+                          
+                            <a class="a1" download="MartinGarrixTheseAreTheTimesMelodia" th:href="@{/assets/CatalogoSonidos/ArtistasMe/MartinGarrix/MartinGarrixTheseAreTimesMelodia.mp3}">Descargar</a>
+                        </div>
+                    </div>
+
+                    <div class="product-item" category="weeknd">
+                        <img th:src="@{/assets/CatalogoSonidos/ArtistasMe/TheWeekend/TheWeekndBlindingLights.jpg}" alt="" >
+                        <div class="botonesselect">
+                            <audio id="audio107">
+                                <source th:src="@{/assets/CatalogoSonidos/ArtistasMe/TheWeekend/TheWeeknBlingsMelodiaEqualizada.mp3}" type="audio/mpeg">
+                            </audio>
+                            <p class="p1" id="playPauseP107" onclick="playPause107()">Play</p>  
+                          
+                            <a class="a1" download="TheWeekendBlindingLightsMelodia" th:href="@{/assets/CatalogoSonidos/ArtistasMe/TheWeekend/TheWeeknBlingsMelodiaEqualizada.mp3}">Descargar</a>
+                        </div>
+                    </div>
+                    <div class="product-item" category="weeknd">
+                        <img th:src="@{/assets/CatalogoSonidos/ArtistasMe/TheWeekend/TheWeekndInYourEyes.jpg}" alt="" >
+                        <div class="botonesselect">
+                            <audio id="audio108">
+                                <source th:src="@{/assets/CatalogoSonidos/ArtistasMe/TheWeekend/TheWeekndYourEyesMelodiaEqualizada.mp3}" type="audio/mpeg">
+                            </audio>
+                            <p class="p1" id="playPauseP108" onclick="playPause108()">Play</p>  
+                          
+                            <a class="a1" download="TheWeekendInYourEyesMelodia" th:href="@{/assets/CatalogoSonidos/ArtistasMe/TheWeekend/TheWeekndYourEyesMelodiaEqualizada.mp3}">Descargar</a>
+                        </div>
+                    </div>
+
+                    <div class="product-item" category="sheeran">
+                        <img th:src="@{/assets/CatalogoSonidos/ArtistasMe/EdSheeran/EdSheeranShapeOfYou.png}" alt="" >
+                        <div class="botonesselect">
+                            <audio id="audio109">
+                                <source th:src="@{/assets/CatalogoSonidos/ArtistasMe/EdSheeran/EdSheeranShapeOfYouBassEqualizada.mp3}" type="audio/mpeg">
+                            </audio>
+                            <p class="p1" id="playPauseP109" onclick="playPause109()">Play</p>  
+                          
+                            <a class="a1" download="EdSheeranShapeOfYouMelodiaBass" th:href="@{/assets/CatalogoSonidos/ArtistasMe/EdSheeran/EdSheeranShapeOfYouBassEqualizada.mp3}">Descargar</a>
+                        </div>
+                    </div>                  
+                    <div class="product-item" category="sheeran">
+                        <img th:src="@{/assets/CatalogoSonidos/ArtistasMe/EdSheeran/EdSheeranShapeOfYou1.jpg}" alt="" >
+                        <div class="botonesselect">
+                            <audio id="audio110">
+                                <source th:src="@{/assets/CatalogoSonidos/ArtistasMe/EdSheeran/EdSheeranShapeOfYouFullStringsEquializada.mp3}" type="audio/mpeg">
+                            </audio>
+                            <p class="p1" id="playPauseP110" onclick="playPause110()">Play</p>  
+                          
+                            <a class="a1" download="EdSheeranShapeOfYouMelodiaFullStrings" th:href="@{/assets/CatalogoSonidos/ArtistasMe/EdSheeran/EdSheeranShapeOfYouFullStringsEquializada.mp3}">Descargar</a>
+                        </div>
+                    </div>
+
+                    
+                </section>
+            </div>
+        </div>
+
+        <script type="text/javascript" th:src="@{/main.js}"></script>
+
+
+        <section class="concard" id="dibujantee">
+            <div class="Carousel">
+                <div class="slick-list" id="slick-list">
+                    <button class="slick-arrow slick-prev" id="button-prev" data-button="button-prev" onclick="app.processingButton(event)">
+                        <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-left" class="svg-inline--fa fa-chevron-left fa-w-10" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M34.52 239.03L228.87 44.69c9.37-9.37 24.57-9.37 33.94 0l22.67 22.67c9.36 9.36 9.37 24.52.04 33.9L131.49 256l154.02 154.75c9.34 9.38 9.32 24.54-.04 33.9l-22.67 22.67c-9.37 9.37-24.57 9.37-33.94 0L34.52 272.97c-9.37-9.37-9.37-24.57 0-33.94z"></path></svg>
+                    </button>
+                
+                    <div class="slick-track" id="track">
+                        <div class="slick">
+                            <div>
+                                <button class="category_item" category="badbunny">
+                                    <a href="#son">
+                                        <h4><small>Bad Bunny</small>Un Vrano Sin Ti</h4>
+                                        <picture>
+                                            <img th:src="@{/images/album1.jpg}" alt="Image">
+                                        </picture>
+                                    </a>                                
+                                </button>
+                            </div>
+                        </div>
+                        <div class="slick">
+                            <div>
+                                <button class="category_item" category="paulo">
+                                    <a href="#son">
+                                        <h4><small>Paulo Londra</small>Homerun</h4>
+                                        <picture>
+                                            <img th:src="@{/images/album2.jpg}" alt="Image">
+                                        </picture>
+                                    </a>                                
+                                </button>
+                            </div>
+                        </div>
+                        <div class="slick">
+                            <div>
+                                <button class="category_item" category="junior">
+                                    <a href="#son">
+                                        <h4><small>Junior H</small>Musica<3/h4>
+                                        <picture>
+                                            <img th:src="@{/images/album4.jpg}" alt="Image">
+                                        </picture>
+                                    </a>                                
+                                </button>
+                            </div>
+                        </div>
+                        <div class="slick">
+                            <div>
+                                <button class="category_item" category="kygo">
+                                    <a href="#son">
+                                        <h4><small>Kygo</small>Thrill Of The Chese</h4>
+                                        <picture>
+                                            <img th:src="@{/images/album6.jpg}" alt="Image">
+                                        </picture>
+                                    </a>                                
+                                </button>
+                            </div>
+                        </div>
+                        <div class="slick">
+                            <div>
+                                <button class="category_item" category="duki">
+                                    <a href="#son">
+                                        <h4><small>Duki</small>Super Sangre Joven</h4>
+                                        <picture>
+                                            <img th:src="@{/images/album9.jpg}" alt="Image">
+                                        </picture>
+                                    </a>                                
+                                </button>
+                            </div>
+                        </div>
+                        <div class="slick">
+                            <div>
+                                <button class="category_item" category="lit">
+                                    <a href="#son">
+                                        <h4><small>Lit Killah</small>MAWZ</h4>
+                                        <picture>
+                                            <img th:src="@{/images/album10.png}" alt="Image">
+                                        </picture>
+                                    </a>                                
+                                </button>
+                            </div>
+                        </div>
+                        <div class="slick">
+                            <div>
+                                <button class="category_item" category="travis">
+                                    <a href="#son">
+                                        <h4><small>Travis Scott</small>Astroworld</h4>
+                                        <picture>
+                                            <img th:src="@{/images/album14.jpg}" alt="Image">
+                                        </picture>
+                                    </a>                                
+                                </button>
+                            </div>
+                        </div>
+                        <div class="slick">
+                            <div>
+                                <button class="category_item" category="mello">
+                                    <a href="#son">
+                                        <h4><small>Marshmello</small>Joytime</h4>
+                                        <picture>
+                                            <img th:src="@{/images/album11.jpg}" alt="Image">
+                                        </picture>
+                                    </a>                                
+                                </button>
+                            </div>
+                        </div>
+                        <div class="slick">
+                            <div>
+                                <button class="category_item" category="martin">
+                                    <a href="#son">
+                                        <h4><small>Marting Garrix</small>Sentio</h4>
+                                        <picture>
+                                            <img th:src="@{/images/album12.jpg}" alt="Image">
+                                        </picture>
+                                    </a>                                
+                                </button>
+                            </div>
+                        </div>
+                        <div class="slick">
+                            <div>
+                                <button class="category_item" category="weeknd">
+                                    <a href="#son">
+                                        <h4><small>The Weeknd</small>Star Boy</h4>
+                                        <picture>
+                                            <img th:src="@{/images/album13.jpg}" alt="Image">
+                                        </picture>
+                                    </a>                                
+                                </button>
+                            </div>
+                        </div>
+                        <div class="slick">
+                            <div>
+                                <button class="category_item" category="sheeran">
+                                    <a href="#son">
+                                        <h4><small>Ed Sheeran</small>Divide</h4>
+                                        <picture>
+                                            <img th:src="@{/images/album15.jpg}" alt="Image">
+                                        </picture>
+                                    </a>                                
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="slick-arrow slick-next" id="button-next" data-button="button-next" onclick="app.processingButton(event)">
+                        <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-right" class="svg-inline--fa fa-chevron-right fa-w-10" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"></path></svg>
+                    </button>
+                </div>
+               
+            <script type="text/javascript" th:src="@{/assets/jquery/jquery.min.js}"></script>
+            <script type="text/javascript" th:src="@{/scriptrepro.js}"></script>
+
+
+    
+        </div>
+        </section>
+
+
+        <section class="contenedornuevo2" id="nuevoo">
+            <div class="conuevo2">
+                <video th:src="@{/images/Espectro - 5167.mp4}" muted autoplay loop></video>
+                <div class="textosnue2">
+                    <h2 class="titulos">Aprende como</h2>
+                    <p>Escuvha cada uno de los sonidos y entiendo co0mo fue la contruccion de cada uno de ellos en
+						las cacniones que mas escuchas, no solo es el artista, el productor tambien tiene mucho que ver.
+                    </p>
+
+                        <button class="botonani" id="audi">
+                            <a href="https://twitter.com/LNERI8?s=07"><i class="fa-solid fa-headphones"></i>Saber Mas</a>
+                        </button>
+                </div>
+            </div>
+
+          
+    
+        </div>
+        </section>
+        
+    
+
+    </main>
+
+    <footer class="contenedorfoo" id="contactoo">
+        <div class="confoo">
+
+            <div class="socialesfoo">
+                <a href="https://www.facebook.com/profile.php?id=100013355534856" target="_blank"><i class="fa-brands fa-facebook"></i>Facebook</a>
+                <a href="https://www.instagram.com/l_neri_l/"  target="_blank" ><i class="fa-brands fa-instagram"></i>Instagram</a>
+                <a href="https://twitter.com/LNERI8?s=07"  target="_blank" ><i class="fa-brands fa-twitter"></i>Twiter</a>
+            </div>
+
+            
+            <h3 class="titulo-final">| Zanjar | ©DigitalStudios | 2023 | <a id="a1" th:href="#" class="linkter">Terminos y Condiciones</a> |</h3>
+        </div>
+
+    </footer>
+
+    <script th:src="@{/js/main.js}"></script>
+    
+</body>
+</html>

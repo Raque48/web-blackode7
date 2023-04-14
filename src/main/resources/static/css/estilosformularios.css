@@ -1,0 +1,206 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+}
+
+h4{
+    text-align: center;
+    color: #000000;
+}
+
+body{
+    background-image: url('../images/studio7.jpg');
+}
+
+.bodyregis{
+    background-image: url('../images/studio12.jpg');
+
+}
+
+.espacioform{
+    padding: 175px 0px 0px 0px ;
+}
+
+.espacioform2{
+    padding: 140px 0px 0px 0px ;
+}
+
+.form-register {
+    width: 500px;
+    background: #ffffff;
+    padding: 30px 30px 30px 5px;
+    margin: auto;
+    border-radius: 4px;
+    font-family: 'calibri';
+    color: white;
+    box-shadow: 7px 13px 37px #000;
+}
+  
+.form-register h4 {
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+  
+.controls {
+    width: 80%;
+    background: #ffffff;
+    padding: 10px;
+    margin: 0px 50px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    border: 1px solid #000000;
+    font-family: 'calibri';
+    font-size: 18px;
+    color: rgb(0, 0, 0);
+}
+  
+.form-register p {
+    height: 40px;
+    text-align: center;
+    font-size: 18px;
+    line-height: 40px;
+    color: #000000;
+}
+  
+  .form-register a {
+    color: rgb(0, 0, 0);
+    text-decoration: underline;
+}
+
+  
+.form-register .botons {
+    cursor: pointer;
+    width: 80%;
+    background: #000000;  /* fallback for old browsers */
+    border-radius: 10px;
+    padding: 12px;
+    color: white;
+    margin: 16px 60px;
+    font-size: 16px;
+}
+
+.form-register .botons:hover{
+    background: #00bba2;
+    border-color:  #00bba2;
+    box-shadow: 0 0 6px rgba(0, 0, .10, .10);
+    
+}
+
+.terminosform{
+    color: #ffffff;
+    margin: auto;
+}
+
+.socialesfoo p{
+    color: #ffffff;
+    font-size: 20px;
+}
+
+.socialesfoo a{
+    color: #ffffff;
+    text-decoration: underline;
+    font-size: 20px;
+}
+
+@media screen and (max-width:650px){
+    
+    .hamburguesa{
+        display: block;
+    }
+
+    .enlaces{
+        position: fixed;
+        background: #000000;  
+        left: 0;
+        top: 0px;
+        width: 70%;
+        height: 100vh;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: left;
+        padding: 1px 1px 50px 1px;
+        flex-direction: column;
+        transform: translate(-100%);
+    }
+
+    .enlaces2{
+        transform: translate(0%);
+    }
+
+    .espacioform{
+        padding: 150px 0px 0px 0px ;
+    }
+    
+    .form-register {
+        width: 300px;
+        background: #ffffff;
+        padding: 30px 30px 30px 30px;
+    }
+      
+    .controls {
+        width: 80%;
+        background: #ffffff;
+        padding: 10px;
+        margin: 0px 20px;
+        border-radius: 4px;
+        margin-bottom: 16px;
+        border: 1px solid #000000;
+        font-family: 'calibri';
+        font-size: 18px;
+        color: rgb(0, 0, 0);
+    }
+      
+    .form-register p {
+        height: 40px;
+        text-align: center;
+        font-size: 18px;
+        line-height: 40px;
+        color: #000000;
+    }
+      
+      .form-register a {
+        color: rgb(0, 0, 0);
+        text-decoration: underline;
+    }
+    
+      
+    .form-register .botons {
+        cursor: pointer;
+        width: 80%;
+        background: #000000;  /* fallback for old browsers */
+        border-radius: 10px;
+        padding: 12px;
+        color: white;
+        margin: 10px 30px;
+        font-size: 16px;
+    }
+    
+    .form-register .botons:hover{
+        background: #1f9161;
+        border-color:  #217a55;
+        box-shadow: 0 0 6px rgba(0, 0, .10, .10);
+        
+    }
+    
+    .terminosform{
+        color: #ffffff;
+        margin: auto;
+    }
+
+    .socialesfoo {
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .socialesfoo p{
+        color: #ffffff;
+        font-size: 10px;
+    }
+    
+    .socialesfoo a{
+        color: #ffffff;
+        text-decoration: underline;
+        font-size: 10px;
+    }
+}

@@ -1,0 +1,18 @@
+ <nav th:fragment="menu-principal" class="contenedormenu">
+            <div class="logo" onclick="location.href='/';">
+                <img th:src="@{/images/LogoZanjarLetrasTransparente.png}">
+            </div>
+             <div class="enlaces">
+                <a href="#audi"><i class="fa-solid fa-music"></i>Albumnes</a>
+                <a th:href="@{/login}"><i class="fa-solid fa-user"></i>Iniciar Sesion</a>
+                <a th:href="@{/signup}"><i class="fa-solid fa-headphones"></i>Registrarse</a>
+             </div>
+             <div >
+					<a class="btn btn-primary" th:href="@{/usuario}">Perfil</a>
+          			<a class="btn btn-primary" th:href="@{/logout}">Salir</a> 
+          	</div> 
+            <div class="hamburguesa">
+                <i class="fa-solid fa-bars" id="hamburguesa"></i>
+            </div>
+
+        </nav>

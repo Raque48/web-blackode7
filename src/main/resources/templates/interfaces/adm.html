@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" th:href="@{/css/estilosadmin.css}">
+    <link rel="stylesheet" th:href="@{/css/estilos.css}">
+    <link rel="shortcut icon" th:href="@{/images/ZNlogoMusicTransparentLittle.png}" type="image/x-icon">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rambla&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rum+Raisin&display=swap" rel="stylesheet">
+
+    <meta name="theme-color" content="#202020">
+
+    <script src="https://kit.fontawesome.com/a01a75bbd0.js" crossorigin="anonymous"></script>
+    
+        <title>Administrador</title>
+    </head>
+    
+
+<body>
+
+    <!--Seccion Menu-->
+
+    <header>
+        <nav class="contenedormenu">
+            <div class="logo" onclick="location.href='/sonidos';">
+                <img th:src="@{/images/LogoZanjarLetrasTransparente.png}">
+            </div>
+            <div class="enlaces">
+					<a class="nav-link" th:href="@{/usuario/sonidos}">Agregar</a>
+                <a href="#son"><i class="fa-solid fa-music"></i>Albumnes</a>
+                <a th:href="@{/logout}"><i class="fa-solid fa-right-from-bracket"></i>Cerrar Sesion</a>
+            </div>
+            
+
+            <div class="hamburguesa">
+                <img th:src="@{/images/imgmenu.png}" id="hamburguesa">
+            </div>
+
+        </nav>
+    </header><br>
+
+    <div class="div-titulo">
+        <h2>Administrador</h1>
+    </div>
+    
+    <div class="contenedor">
+
+        <div class="div-formulario">
+            <h2>Agregar Sonidos</h2>
+
+            <form action="#" id="formulario">
+                <input type="text" id="nombre" placeholder="Nombre de la cancion">
+                <input type="text" id="puesto" placeholder="Autor del sonido">
+               
+                <p>Categoria</p>
+            <select class="controls" type="text" id="artista">
+                <option id="artista">Melodia</option>
+                <option id="artista">Beat</option>
+                <option id="artista">808</option>
+                <option id="artista">Kick</option>
+                <option id="artista">Hats</option>
+                <option id="artista">Snares</option>
+                <option id="artista">Claps</option>
+                <option id="artista">Vocales</option>
+                <option id="artista">Bad Bunny</option>
+                <option id="artista">Paulo Londra</option>
+                <option id="artista">Junior H</option>
+                <option id="artista">Kygo</option>
+                <option id="artista">Duki</option>
+                <option id="artista">Lit Killah</option>
+                <option id="artista">Travis Scott</option>
+                <option id="artista">Marshmello</option>
+                <option id="artista">Martin Garrix</option>
+                <option id="artista">The Weeknd</option>
+                <option id="artista">Ed Sheeran</option>
+              </select>
+              <input type="file" name="archivoAudio" id="puesto">
+        
+                <button class="botonagregar" type="submit" id="btnAgregar">Agregar</button>
+            </form>
+        </div>
+
+        <div class="div-listado">
+            <h2>Listado de Sonidos
+            </h2>
+            <div class="div-empleados">
+                
+            </div>
+        </div>
+
+    </div>
+
+    <script src="admin.js"></script>
+
+    <!--Seccion Redes Sociales
+
+    <div class="socialbar">
+        <a href="https://www.facebook.com/profile.php?id=100091389575360" class="iconface" target="_blank"><img src="images/iconf.png" class="icosociales"></a>
+        <a href="https://www.instagram.com/lone_tapl/" class="iconinsta" target="_blank"><img src="images/iconi.png" class="icosociales"></a>
+        <a href="https://twitter.com/lOneTapl" class="icontwi" target="_blank"><img src="images/icont.png" class="icosociales"></a>
+        
+    </div>
+
+-->
+
+    <main>
+
+    
+       
+    </main>
+
+    <footer class="contenedorfoo" id="contactoo">
+        <div class="confoo">
+            <img src="images/OneTapLetraLogoBlanco.png" alt="" class="imgfloo">
+
+            <span class="lineafoo"></span>
+            
+            <p id="cont"></p>
+
+            <div class="socialesfoo">
+                <a href="https://www.facebook.com/profile.php?id=100091389575360" target="_blank"><img th:src="@{/images/iconf.png}"></a>
+                <a href="https://www.instagram.com/lone_tapl/"  target="_blank" ><img th:src="@{/images/iconi.png}"></a>
+                <a href="https://twitter.com/lOneTapl"  target="_blank" ><img th:src="@{/images/icont.png}"></a>
+            </div>
+
+            
+            <h3 class="titulo-final">| One Tap | ©United Networks | 2023 | <a href="terminoslicencias.html">Terminos y Condiciones</a> |</h3>
+        </div>
+
+    </footer>
+
+    <script th:src="@{/js/main.js}"></script>
+    <script th:src="@{/js/admin.js}"></script>
+    
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" th:href="@{/css/estilosformularios.css}">
+  <link rel="stylesheet" th:href="@{/css/estilos.css}">
+  <script src="https://kit.fontawesome.com/a01a75bbd0.js" crossorigin="anonymous"></script>
+  <link rel="shortcut icon" th:href="@{/images/ZNlogoMusicTransparentLittle.png}" type="image/x-icon">
+  <title>Registro</title>
+</head>
+<body class="bodyregis">
+    <header>
+        <nav class="contenedormenu">
+            <div class="logo" onclick="location.href='/';">
+                <img th:src="@{/images/LogoZanjarLetrasTransparente.png}">
+            </div>
+            <div class="enlaces">
+                <a href="javascript:history.back()"><i class="fa-solid fa-arrow-left"></i>Regresar</a>
+            </div>
+            
+
+            <div class="hamburguesa">
+                <i class="fa-solid fa-bars" id="hamburguesa"></i>
+            </div>
+
+        </nav>
+    </header>
+    <main class="espacioform2">
+        <form name="form" th:action="@{/signup}" method="post" class="form-register">
+            <h4>Registrar</h4>
+            <input class="controls" type="text" name="nombre" id="nombre" placeholder="Escriba su nombre" required="required">
+            <input class="controls" type="text" name="username" id="username" placeholder="Escriba un nombre usuario" required="required">
+            <input class="controls" type="email" name="email" id="email" placeholder="Ingrese su Correo" required="required">
+            <input class="controls" type="password" name="password" id="password" placeholder="Crea una Contraseña" required="required">
+      <!-- <input class="botons" type="submit" value="Registrar" >
+            <p>Ya tengo una cuenta                    <a th:href="@{/inicio}"><b>Ingresar</b></a></p>-->
+            <button type="submit" title="Quiero registrarme." class="botons">Registrarse</button>
+        </form>
+
+            <div class="socialesfooo">
+                <p>| One Tap | ©United Networks | 2023 |</p><a id="a2" th:href="@{/terminos}">Terminos y Condiciones</a><p>|</p>
+            </div>
+        
+    </main>
+
+    <!--<script th:src="@{/js/main.js}"></script>-->
+</body>
+
+</html>

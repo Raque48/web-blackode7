@@ -1,0 +1,1047 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+}
+
+body{
+    font-family: 'Rambla', sans-serif;
+    
+}
+
+.titulos{
+    font-family: 'Rum Raisin', sans-serif;
+    color: #000000;
+    font-size: 40px;
+    text-align: left;
+    padding: 40px 0px 20px 0px;
+}
+
+/*Diseño Menu*/
+
+header{
+    background-color: #00bba2; /*#00bba2   #6aac01*/
+
+    width: 100%;
+    box-shadow: 0 0 6px rgba(0, 0, .10, .6);
+    position: fixed;
+    z-index: 100; /*Posiciona el menu sobre elemntos relative o absolute*/
+}
+
+nav.contenedormenu{    
+    height: 120px;
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .logo{
+  width: 80px;
+  margin: 0px 40px 0px 40px;
+}
+
+.logo img{
+    cursor: pointer;
+    min-width: 180px;
+    height: 10%;
+    width: 10%;
+    vertical-align: top;
+}
+
+
+nav a{
+    color:#000000;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 10px 15px 10px 15px;
+    margin: 0px 40px 0px 0px;
+    border-radius: 5px;
+    transition: .5s ease-in-out;
+}
+
+nav a:hover{
+    background: #00bba2;
+    color: #000000;
+    width: 90%;
+    text-align: center;
+    border-radius: 5px;
+    padding: 10px 20px 10px 20px;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.6);
+}
+
+nav i{
+    width: 15px;
+    padding: 0px 15px 0px 1px;
+}
+
+.hamburguesa{
+    height: 100%;
+    width: 120px;
+    text-align: center;
+    display: none;
+}
+
+.hamburguesa i{
+    color: white;
+    width: 150px;
+    vertical-align: top;
+    padding: 10px 10px 0px 0px;
+    cursor: pointer;
+
+}
+
+/*Boton Menu Hmaburguesa Animado
+.hamburguesa{
+    margin: 10px;
+    width: 100px;
+    height: 30px;
+    cursor: pointer;
+}
+.lblham{
+    width: 50px;
+    height: 30px;
+    position: relative;
+    cursor: pointer;
+}
+.lblham #spn1,#spn2,#spn3{
+    position: absolute;
+    content: "";
+    background: white;
+    width: 50px;
+    height: 5px;
+    border-radius: 5px;
+    transition: all .5s ease-in-out;
+}
+#spn2{
+    top: 11px;
+}
+#spn3{
+    top: 22px;
+}
+#hamburguesa{
+    display: none;  
+}
+#hamburguesa:checked ~ .lblham #spn1{
+    transform: rotate(140deg);
+    top: 10px;
+}
+#hamburguesa:checked ~ .lblham #spn2{
+    opacity: 0;
+}
+#hamburguesa:checked ~ .lblham #spn3{
+    transform: rotate(-140deg);
+    top: 10px;
+}*/
+
+/*Imagen portada*/
+
+.portada{
+    width: 100%;
+    height: 550px;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+}
+
+/*Barra Redes Sociales
+
+.socialbar{
+    position: fixed;
+    right: 0;
+    top: 60%;
+    font-size: 1.5px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    z-index: 100;
+}
+
+.icosociales{
+    text-decoration: none;
+    padding: 10px;
+    display: flex;
+}
+
+.iconface{
+    background: #3a59a8;
+    border-radius: 10px 0 0 0;
+    transition: .5s ease-in-out;
+}
+
+.socialbar .iconface:hover {
+    padding: 5px 30px;
+    background: #3a59a8;
+    border-radius: 10px 0 0 10px;
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, .6);
+}
+
+
+.iconinsta{
+    background: #833ab4;  
+    background: -webkit-linear-gradient(to left, #fcb045, #fd1d1d, #833ab4);  
+    background: linear-gradient(to left, #fcb045, #fd1d1d, #833ab4); 
+    transition: .5s ease-in-out;
+}
+
+.socialbar .iconinsta:hover {
+    padding: 5px 40px;
+    background: #833ab4;  
+    background: -webkit-linear-gradient(to left, #fcb045, #fd1d1d, #833ab4);  
+    background: linear-gradient(to left, #fcb045, #fd1d1d, #833ab4); 
+    border-radius: 10px 0 0 10px;
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, .6);
+}
+
+.icontwi{
+    background: #03b3f3;
+    border-radius: 0 0 0 10px;
+    transition: .5s ease-in-out;
+}
+
+.socialbar .icontwi:hover {
+   padding: 5px 40px;
+   background: #03b3f3;
+   border-radius: 10px 0 0 10px;
+   box-shadow: 0 0 6px 0 rgba(0, 0, 0, .6);
+}
+*/
+
+/*Seccion Nuevo*/
+
+main .contenedornuevo{
+    padding: 0 0 20px 0;
+    background: #f2f2f2;
+}
+
+.conuevo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imgnuevo{
+    width: 25%;
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.822);
+    /*margin: 60px 0px 40px 60px;
+    order: 1; Para poner la imagen a la izquierda del texto*/
+    margin: 120px 0px 80px 60px;
+    cursor: pointer;
+    order: 1;
+} 
+
+.conuevo .imgnuevo:hover{
+    transform: rotate(5deg) scale(1.2);
+}
+
+.conuevo .imgnuevo{
+    transition: transform .5s ease-in-out;
+}
+
+.conuevo .textosnue{
+    width: 50%;
+}
+
+.textosnue p{
+    padding: 0px 0px 40px 0px;
+    font-size: 20px;
+    text-align: justify;
+}
+
+.botonani{
+    position: relative;
+    display: block;
+    height: 60px;
+    width: 200px;
+    border-radius: 10px;
+    text-transform: uppercase;
+    background: #000000;
+    font-size: 15px;
+    overflow: hidden;
+    transition: all .5s ease-in-out;
+    border: 2px;
+    cursor: pointer;
+}
+
+.botonani:hover{
+    width: 250px;
+    background: #00bba2;
+    box-shadow: 0 0 10px #969696, 0 0 10px, #c9c9c9 0 0 0px;
+    
+}
+
+.botonrepro{
+    position: relative;
+    display: block;
+    height: 60px;
+    width: 200px;
+    border-radius: 10px;
+    text-transform: uppercase;
+    background: #000000;
+    font-size: 15px;
+    overflow: hidden;
+    transition: all .5s ease-in-out;
+    border: 2px;
+    cursor: pointer;
+    margin: 50px auto;
+}
+
+.botonrepro:hover{
+    width: 250px;
+    background: #00bba2;
+    box-shadow: 0 0 10px #969696, 0 0 10px, #c9c9c9 0 0 0px;
+}
+
+.botonani i{
+    padding: 0px 5px;
+}
+
+.botonrepro i{
+    padding: 0px 5px;
+}
+
+
+.textosnue a{
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.botonani:hover a{
+    text-decoration: none;
+    color: #000000;
+}
+
+.botonrepro:hover a{
+    text-decoration: none;
+    color: #000000;
+}
+
+
+.textosnue img{
+    width: 20px;
+    padding: 0px 10px 0px 0px;
+}
+
+/*Seccion galeria*/
+
+h1{
+    font-family: 'Rum Raisin', sans-serif;
+    color: #000000;
+    font-size: 70px;
+    text-align: center;
+    padding: 40px 0px 20px 0px;
+}
+
+.linea{
+    background: #dd1818;
+    height: 10px;
+    width: 100%;
+    display: block;
+    margin: 20px 0px 0px 0px;
+}
+
+.congaleria{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    width: 90%;
+    margin: auto;
+    grid-gap: 30px;
+    padding: 80px 0px;
+    overflow: hidden;
+}
+
+.congaleria > a{
+    display: block;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 0 6px rgba(0, 0, 0, .6);
+}
+
+.congaleria a:hover img{
+    filter: blur(2px);
+    transform: rotate(10deg) scale(1.5);
+}
+
+.congaleria img{
+    width: 100%;
+    vertical-align: top;
+    height: 300px;
+    object-fit: cover;
+    transition: transform 0.5s;
+}
+
+.boxgaleri{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, .5);
+    transition: transform .5s ease-in-out;
+    width: 100%;
+    height: 100vh;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: scale(0);
+}
+
+.boxgaleri:target{
+    transform: scale(1);
+}
+
+.boxgaleri .imgfija{
+    width: 60vw;
+    max-height: 90vh;
+}
+
+.congaleria a{
+    background: #dd1818;
+    font-size: 20px;
+    text-decoration: none;
+    color: #ffffff;
+    text-align: center;
+    padding: 0 0 2px 0;
+}
+
+/*Botones Galeria*/
+
+.close img{
+    width: 40px;
+}
+
+.close{
+    display: block;
+    position: absolute;
+    top: 30px;
+    right: 200px;
+}
+
+.next img{
+    width: 40px;
+}
+
+.next{
+    display: block;
+}
+
+
+/*Seccion Dibujante Mi Tarjeta*/
+
+.lineatarje{
+    background: #ffffff;
+    height: 10px;
+    width: 100%;
+    display: block;
+    margin: 20px 0px 0px 0px;
+}
+
+a{
+    text-decoration: none;
+}
+
+.concard{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    background: #000000;
+}
+
+.tarjeta{
+    margin: 80px 80px 80px 80px;
+}
+
+.tarjeta a{
+    display: inline-block;
+}
+
+.tarjeta:hover figure{
+    -webkit-transform: perspective(600px) rotateY(180deg);
+    -ms-transform: perspective(600px) rotateY(180deg);
+    -o-transform: perspective(600px) rotateY(180deg);
+    transform: perspective(600px) rotateY(180deg);
+
+    -webkit-box-shadow: 0px 2px 10px 2px rgba(0, 0, 0, 0.822);
+    -moz-box-shadow: 0px 2px 10px 2px rgba(0, 0, 0, 0.822);
+    box-shadow: 0px 2px 10px 2px rgba(0, 0, 0, 0.822);
+}
+
+.tarjeta:hover figure img{
+    filter: blur(2px);
+}
+
+figure {
+    width: 300px;
+    height: 350px;
+    margin: 0;
+    position: relative;
+    transition: all ease .5s;
+    transform-style: preserve-3d;
+    transform: perspective(600px) rotateY(0deg);
+
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.5);
+}
+
+figure .imagenyo{
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    transition: all ease .5s;
+}
+
+figure .imagenyo{
+    display: block;
+    /*backface-visibility: hidden;*/
+}
+
+figure .caratexto{
+    position: absolute;
+    top: 0;
+    padding: 44px;
+    text-align: center;
+    font-size: 10px;
+    color: #ffffff;
+    transform: perspective(600px) rotateY(180deg);
+    backface-visibility: hidden;
+    overflow: auto;
+    background: #00000086;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #dd1818ad, #131313bd);  
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #dd1818b7, #131313b7);
+     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+figure .caratexto h2{
+    color: #ffffff;
+    font-weight: normal;
+    margin-bottom: 20px;
+    font-size: 35px;
+}
+
+figure .caratexto hr{
+    height: 5px;
+    background: #ffffff;
+    border: none;
+    margin-bottom: 20px;
+}
+
+figure .caratexto p{
+    line-height: 22px;
+    font-size: 20px;
+    text-align: justify;
+}
+
+/*Seccion Formas*/
+.conformas{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.conformas .textosformas{
+    width: 50%;
+    padding: 40px 0px 0px 0px;
+}
+
+.textosformas p{
+
+    font-size: 20px;
+    text-align: justify;
+    margin: 0px 0px 150px 0px;
+}
+
+.conformas{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.conformas .textosformass{
+    width: 50%;
+    padding: 40px 0px 0px 0px;
+}
+
+.textosformass p{
+
+    font-size: 20px;
+    text-align: justify;
+}
+
+
+
+
+/*Seccion Footer*/
+
+footer{
+    background: #00927f;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to top, #007767, #007464, #036868);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to top, #04b384, #08d6a3, #03afaf); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    height: 200px;
+    width: 100%;
+    padding-top: 30px;
+    color: #000000;
+}
+
+.confoo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.titulofoo{
+    color: #000000;
+    font-size: 50px;
+    text-align: center;
+    padding: 80px 0px 40px 0px;
+}
+
+.lineafoo{
+    background: #000000;
+    height: 4px;
+    width: 900px;
+    display: block;
+    margin: 0px 0px 0px 0px;
+}
+
+.confoo p{
+    color: #000000;
+    font-size: 20px;
+    padding: 0px 380px 0px 380px;
+}
+
+.confoo a{
+    color: #000000;
+    text-decoration: none;
+}
+
+.confoo .linkter{
+    color: #000000;
+    text-decoration: underline;
+}
+
+.socialesfoo{
+    width: 80px;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 40px 0px 40px 0px ;
+}
+
+.socialesfoo a{
+    width: 80px;
+    margin: 0px 30px 0px 30px;
+    
+}
+
+.socialesfooo{
+    color: white;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 40px 0px 40px 0px ;
+}
+
+.socialesfooo a{
+    color: white;
+    text-decoration: underline;
+    
+}
+
+
+.socialesfoo i{
+    width: 80px;
+    transition: all .5s ease-in-out;
+}
+
+.socialesfoo i:hover{
+   
+    transform: rotate(360deg);
+}
+
+.imgfloo{
+    width: 400px;
+    padding: 20px 0px 40px 0px;
+}
+
+
+
+/*MenuHamburgesa PC*/
+
+@media screen and (max-width:1000px) {
+    .hamburguesa{
+        display: block;
+    }
+
+    .enlaces{
+        position: fixed;
+        background: #000000;
+        width: 100%;
+        left: 0;
+        top: 0px;
+        width: 30%;
+        height: 100vh;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        padding: 5px 5px 5px 5px;
+        flex-direction: column;
+        transform: translate(-100%);
+        
+    }
+
+    .enlaces2{
+        transform: translate(0%);
+    }
+
+    
+    nav a{
+        color:#ffffff;
+        text-decoration: none;
+        font-size: 30px;
+        padding: 10px 10px 10px 10px;
+        border-radius: 5px;
+        transition: .5s ease-in-out;
+    }
+    
+    nav a:hover{
+        background: #ffffff;
+        color: #000000;
+        width: 10%;
+        text-align: center;
+        border-radius: 5px;
+        padding: 10px 15px 10px 15px;
+        box-shadow: 0 0 6px rgba(0, 0, 0, 0.6);
+    }
+
+}
+    
+    
+
+
+/*MenuHamburguesa Moviles*/
+
+@media screen and (max-width:650px){
+    
+    .hamburguesa{
+        color: #000000;
+        display: block;
+    }
+
+    .hamburguesa i{
+        color: #000000;
+       
+    }
+
+    .enlaces{
+        position: fixed;
+        background: #000000;  
+        left: 0;
+        top: 0px;
+        width: 70%;
+        height: 100vh;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: left;
+        padding: 1px 1px 50px 1px;
+        flex-direction: column;
+        transform: translate(-100%);
+    }
+
+    .enlaces2{
+        transform: translate(0%);
+    }
+
+    /*Titulos en Moviles*/
+
+    .titulos{
+        text-align: center;
+        font-size: 30px;
+        padding: 20px 1px 20px 1px;
+    }
+
+    /*Seccion Menu Movil*/
+
+    nav.contenedormenu{    
+        height: 105px;
+    }
+
+    nav a{
+        font-size: 25px;
+        padding: 10px 40px 10px 10px;
+    }
+
+    nav a:hover{
+        width: 70%;
+        padding: 10px 20px 10px 0px;
+        text-align: center; 
+    }
+
+    .imgmenu{
+        width: 25px;
+        padding: 1px 10px 1px 1px;
+    }
+    
+    nav.logo{
+        height: 70px;
+    }
+    
+
+    .logo img{
+        height: 100%;
+        width: 10%;
+        vertical-align: top;
+        padding: 5px; 
+    }
+
+
+    .hamburguesa{
+        width: 20%;
+        padding: 40px 40px 20px 0px;
+    }
+
+    .hamburguesa i{
+        width: 150px;
+   
+        padding: 40px 100px 0px 10px;
+        cursor: pointer;
+    
+    }
+    
+    /*Imagen portada*/
+    
+    .portada{
+        height: 450px;
+    }
+
+    /*Social Barra*/
+
+    .socialbar{
+        right: 0;
+        top: 70%;
+    }
+
+    /*Seccion Nuevo*/
+      
+    .conuevo{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .imgnuevo{
+        width: 70%;
+        margin: 70px 0px 40px 0px;
+    } 
+
+    .conuevo .imgnuevo:hover{
+        transform: rotate(5deg) scale(1.2);
+    }
+    
+    .conuevo .textosnue{
+        width: 90%;
+        padding: 1px 1px 20px 1px;
+        text-align: center;
+    }
+    
+    .textosnue p{
+        padding: 0px 30px 30px 30px;
+        font-size: 20px;
+        text-align: justify;
+    }
+
+    .botonani{
+        height: 60px;
+        width: 200px;
+        display: table-column; 
+        justify-content: center;
+        font-size: 16px; 
+    }
+    
+    .botonani:hover{
+        width: 230px;
+    }
+    
+    
+    .textosnue img{
+        width: 15px;
+        padding: 0px 10px 0px 0px;
+    }
+
+    /*Seccion Galeria*/
+
+    h1{
+        font-size: 40px;
+        text-align: center;
+        padding: 40px 0px 20px 0px;
+    }
+
+    .congaleria{
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+
+    .congaleria a{
+       
+        font-size: 25px;
+        padding: 0 0 4px 0;
+    }
+    
+    /*Botones Galeria*/
+
+    .close img{
+        width: 30px;
+    }
+    
+    .close{
+        top: 200px;
+        right: 250px;
+    }
+    
+    .next img{
+        width: 30px;
+    }  
+
+    /*Seccion Trajetas*/
+
+    .tarjeta{
+        margin: 60px 80px 60px 80px;
+    }
+    
+    /*Seccion Formas*/
+
+    .conformas{
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin: 0px 0px 0px 0px;
+    }
+    
+    /*Imagenes for*/
+    
+    .imgfor1{
+        width: 60%;
+        margin: 80px 0px 40px 0px;
+    } 
+
+    .conformas .imgfor1:hover{
+        transform: rotate(5deg) scale(1.2);
+    }
+
+    .imgfor2{
+        width: 70%;
+        margin: 10px 0px 70px 0px;
+        order: 0;
+    } 
+
+    .conformas .imgfor2:hover{
+        transform: rotate(5deg) scale(1.2);
+    }
+
+    .imgfor3{
+        width: 60%;
+        margin: 0px 0px 40px 0px;
+    } 
+
+    .conformas .imgfor3:hover{
+        transform: rotate(5deg) scale(1.2);
+    }
+    
+
+    .conformas .textosformas{
+        width: 90%;
+        padding: 30px 1px 1px 1px;
+        text-align: center;
+    }
+    
+    .textosformas p{
+        padding: 0px 30px 0px 30px;
+        font-size: 20px;
+        text-align: justify;
+    }
+
+    .botonfor{
+        height: 60px;
+        width: 200px;
+        display: table-column; 
+        justify-content: center;
+        font-size: 16px;
+        margin: 0px 0px 40px 0px; 
+    }
+    
+    .botonfor:hover{
+        width: 230px;
+    }
+    
+    
+    .textosformas img{
+        width: 15px;
+        padding: 0px 0px 0px 0px;
+    }
+
+  
+
+    .conformas .textosformas{
+        width: 40%;
+    }
+    
+    .textosformas p{
+        padding: 0px 0px 0px 0px;
+        font-size: 15px;
+        
+        margin: 0px 0px 120px 0px ;
+    }
+
+    .conformas .textosformass{
+        width: 70%;
+        margin: 0px 0px 0px 0px;
+    }
+    
+    .textosformass p{
+        padding: 0px 0px 0px 0px;
+        font-size: 15px;
+        
+        margin: 0px 0px 0px 0px ;
+    }
+
+    /*Seccion Footer*/
+
+    footer{
+        height: 200px;
+    }
+
+    .titulofoo{
+        padding: 60px 0 20px 0px;
+    }
+    
+    .lineafoo{
+        width: 290px;
+        margin: 0px 0px 40px 0px;
+    }
+
+    .titulofoo{
+        font-size: 30px;
+    }
+    
+    .confoo p{
+        font-size: 15px;
+        padding: 0px 60px 10px 60px;
+    }
+
+    .confoo h3{
+        font-size: 15px;
+    }
+    
+    .socialesfoo a{
+        margin: 0px 10px 0px 10px;
+    }
+
+}

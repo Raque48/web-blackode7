@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" th:href="@{/css/estilosformularios.css}">
+  <link rel="stylesheet" th:href="@{/css/estilos.css}">
+  <script src="https://kit.fontawesome.com/a01a75bbd0.js" crossorigin="anonymous"></script>
+  <link rel="shortcut icon" th:href="@{/images/ZNlogoMusicTransparentLittle.png}" type="image/x-icon">
+  <title>Inicio de Sesion</title>
+</head>
+<body>
+    <header>
+        <nav class="contenedormenu">
+            <div class="logo" onclick="location.href='/';">
+                <img th:src="@{/images/LogoZanjarLetrasTransparente.png}">
+            </div>
+            <div class="enlaces">
+                <a th:href="@{/}"><i class="fa-solid fa-arrow-left"></i>Regresar</a>
+
+            </div>
+            
+
+            <div class="hamburguesa">
+                <i class="fa-solid fa-bars" id="hamburguesa"></i>
+            </div>
+
+        </nav>
+    </header>
+    <main class="espacioform">
+        <form name="form" th:action="@{/login}" method="post" class="form-register">
+            <h4>Inicio de Sesion</h4>
+            <div th:if="${param.error}">
+			<span class="text-danger">Usuario / Password incorrectos!</span>
+			</div>
+            <input class="controls" type="text" name="username" id="username" placeholder="Ingrese su nombre de usuario" required autofocus>
+            <input class="controls" type="password" name="password" id="password" placeholder="Ingrese su Contraseña" required>
+            <button class="botons" type="submit">Entrar</button>
+             <p class="text-primary" style="font-size: small">¿Todavía no estas registrado? <a th:href="@{/signup}">
+				 <b>Regístrate</b></a></p>
+			
+        </form>
+        <div class="socialesfooo">
+            <p>| One Tap | ©United Networks | 2023 |</p><a th:href="@{/terminos}">Terminos y Condiciones</a><p>|</p>
+        </div>
+        
+    </main>
+
+    <script th:src="@{/js/main.js}"></script>
+</body>
+
+</html>

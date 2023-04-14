@@ -1,0 +1,253 @@
+.wrap{
+	max-width: 1100px;
+	width: 90%;
+	margin: 50px auto;
+}
+
+.wrap h2{
+	text-align: center;
+	margin: 0px 0px 50px 0px;
+}
+.store-wrapper{
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.category_list{
+	display: flex;
+	flex-direction: column;
+	width: 18%;
+}
+
+.category_list .category_item{
+	display: block;
+	width: 90%;
+	padding: 10px 0;
+	margin-bottom: 0px;
+	background: #000000;
+	cursor: pointer;
+	text-align: center;
+	text-decoration: none;
+	color: #fff;
+}
+
+.category_list .ct_item-active{
+	background: #00bba2;
+}
+
+/* PRODUCTOS ============*/
+
+.products-list{
+	width: 82%;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+
+.products-list .product-item{
+	width: 22%;
+	margin-left: 3%;
+	margin-bottom: 25px;
+	box-shadow: 0px 0px 6px 0px rgba(0,0,0,0.22);
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	align-self: flex-start;
+
+	transition: all .4s;
+}
+
+.products-list .product-item img{
+	width: 100%;
+}
+
+.products-list .product-item .botonesselect{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.products-list .product-item .p1{
+
+	width: 100%;
+	padding: 8px 0;
+	background: #000000;
+    cursor: pointer;
+	color: #fff;
+	text-align: center;
+	text-decoration: none;
+    
+}
+
+.products-list .product-item .p1:hover{
+	background: #00bba2;   
+}
+
+.products-list .product-item .a1{
+
+	width: 100%;
+	padding: 8px 0;
+	background: #0fac01;
+	color: #ffffff;
+    cursor: pointer;
+	text-align: center;
+	text-decoration: none;
+    
+}
+
+.products-list .product-item .a1:hover{
+	background: #00bba2;   
+}
+
+
+/*Video y texto*/
+
+main .contenedornuevo2{
+    padding: 0 0 20px 0;
+    background: #f2f2f2;
+}
+
+.conuevo2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+video{
+    width: 50%;
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.822);
+    /*margin: 60px 0px 40px 60px;
+    order: 1; Para poner la imagen a la izquierda del texto*/
+    margin: 80px 100px 40px 0px;
+    cursor: pointer;
+}
+
+.video2 {
+    width: 50%;
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.822);
+    margin: 60px 100px 40px 0px;
+    order: 1;
+    margin: 80px 0px 40px 100px;
+    cursor: pointer;
+}
+
+.conuevo2 .textosnue2{
+    width: 30%;
+}
+
+.textosnue2 p{
+    padding: 0px 0px 40px 0px;
+    font-size: 20px;
+    text-align: justify;
+}
+
+
+
+/* RESPONSIVE */
+
+@media screen and (max-width: 1100px){
+	.products-list .product-item{
+		width: 30.3%;
+	}
+}
+
+@media screen and (max-width: 900px){
+	.category_list,
+	.products-list{
+		width: 100%;
+	}
+
+	.category_list{
+		flex-direction: row;
+		justify-content: space-between;
+	}
+
+	.category_list .category_item{
+		align-self: flex-start;
+		width: 15%;
+		font-size: 14px;
+	}
+
+	.products-list .product-item{
+		margin-left: 4.5%;
+	}
+
+	.products-list .product-item:nth-child(3n+1){
+		margin-left: 0px;
+	}
+}
+
+@media screen and (max-width: 700px){
+	.category_list{
+		flex-direction: column;
+	}
+	.category_list .category_item{
+		width: 100%;
+		margin-bottom: 10px;
+	}
+}
+
+@media screen and (max-width: 600px){
+
+	.products-list .product-item{
+		
+		width: 45%;
+	}
+
+	.products-list .product-item:nth-child(3n+1){
+		margin-left: 3%;
+	}
+
+	.products-list .product-item:nth-child(2n+1){
+		margin-left: 3%;
+	}
+
+	.wrap h2{
+		margin: 15px 0px;
+	}
+
+
+	/*Contenedores videos*/
+
+	/*Seccion Nuevo*/
+      
+    .conuevo2{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    video{
+        width: 70%;
+        margin: 70px 0px 40px 0px;
+		order: 1;
+    }
+
+	.video2{
+        width: 70%;
+        margin: 70px 0px 40px 0px;
+
+    } 
+    
+    .conuevo2 .textosnue2{
+        width: 90%;
+        padding: 40px 1px 20px 1px;
+        text-align: center;
+    }
+    
+    .textosnue2 p{
+        padding: 0px 30px 30px 30px;
+        font-size: 20px;
+        text-align: justify;
+    }
+    
+
+}
+
+@media screen and (max-width: 350px){
+	.products-list .product_item{
+		width: 100%;
+		margin-left: 0px;
+	}
+}
